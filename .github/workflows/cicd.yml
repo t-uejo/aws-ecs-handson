@@ -25,10 +25,8 @@ jobs:
         working-directory: cicd-section/api
     steps:
       # Checkout code
-      - uses: action/checkout@v4
-        with:
-          repository: 'aws-ecs-handson'
-
+      - uses: actions/checkout@v4
+      
       - name: Run Tests and Build an Image
         run: docker image build -t temp_api_image:latest .
       
